@@ -2,7 +2,17 @@
     "BraveRewardsDisabled": true,
     "BraveWalletDisabled": true,
     "BraveVPNDisabled": true,
+    "BraveAIChatEnabled": false,
+    "BraveStatsPingEnabled": false,
+    "BraveWebDiscoveryEnabled": false,
+    "BraveNewsDisabled": true,
+    "BraveTalkDisabled": true,
+    "BravePlaylistEnabled": false,
     "PromotionsEnabled": false,
     "DefaultBrowserSettingEnabled": false,
-    "FeedbackSurveysEnabled": false
+    "FeedbackSurveysEnabled": false,
+    "BraveP3AEnabled": false,
+    "UrlKeyedAnonymizedDataCollectionEnabled": false,
+    "SafeBrowsingExtendedReportingEnabled": false,
+    "MetricsReportingEnabled": false
 }
