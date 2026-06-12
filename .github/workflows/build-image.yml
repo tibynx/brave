@@ -26,6 +26,7 @@ jobs:
     outputs:
       brave_package_version: ${{ steps.version.outputs.brave_package_version }}
       keyring_package_version: ${{ steps.version.outputs.keyring_package_version }}
+      image_tag: ${{ steps.version.outputs.image_tag }}
     steps:
       - name: Add Brave's APT repository
         run: |
