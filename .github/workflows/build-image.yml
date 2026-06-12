@@ -43,6 +43,7 @@ jobs:
           keyring_package_version=$(apt-cache policy brave-keyring | awk -F': ' '/Candidate:/ {print $2}')
           [ -n "$brave_package_version" ] || { echo "Failed to determine Brave package version" >&2; exit 1; }
           [ -n "$keyring_package_version" ] || { echo "Failed to determine Brave keyring package version" >&2; exit 1; }
+          image_tag=$(echo "$brave_package_version" | cut -d'~' -f1 | sed -E 's/^[0-9]+://; s/[^0-9A-Za-z_.-]+/-/g')
           echo "brave_package_version=$brave_package_version" >> $GITHUB_OUTPUT
           echo "keyring_package_version=$keyring_package_version" >> $GITHUB_OUTPUT
           echo "image_tag=$image_tag" >> $GITHUB_OUTPUT
