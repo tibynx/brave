@@ -2,6 +2,8 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
 # set labels
 ARG IMAGE_BUILD_DATE
+ARG BROWSER_INSTALL_VERSION
+ARG KEYRING_INSTALL_VERSION
 LABEL release_channel="stable"
 LABEL org.opencontainers.image.authors="tibynx"
 LABEL org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
@@ -34,8 +36,8 @@ RUN \
     > /etc/apt/sources.list.d/brave-browser-release.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    brave-keyring \
-    brave-browser && \
+    brave-keyring=${KEYRING_INSTALL_VERSION} \
+    brave-browser=${BROWSER_INSTALL_VERSION} && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
