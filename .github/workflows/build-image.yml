@@ -97,4 +97,4 @@ jobs:
           labels: |
             org.opencontainers.image.ref.name=${{ github.ref }}
             org.opencontainers.image.revision=${{ github.sha }}
-            org.opencontainers.image.version=${{ needs.version.outputs.image_tag }}
+            org.opencontainers.image.version=${{ needs.version.outputs.brave_package_version }}
