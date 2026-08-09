@@ -27,6 +27,10 @@ ENV TITLE="Brave"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN \
+  echo "**** add branding ****" && \
+    curl --create-dirs -o \
+      /etc/s6-overlay/s6-rc.d/init-adduser/branding \
+      https://raw.githubusercontent.com/tibynx/tibynx/refs/heads/main/branding && \
   echo "**** install packages ****" && \
   curl -fsSLo \
     /usr/share/keyrings/brave-browser-archive-keyring.gpg \
