@@ -4,15 +4,14 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 ARG IMAGE_BUILD_DATE
 ARG BROWSER_INSTALL_VERSION
 ARG KEYRING_INSTALL_VERSION
-LABEL release_channel="stable"
 LABEL org.opencontainers.image.authors="tibynx"
 LABEL org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 LABEL org.opencontainers.image.description="Web accessible Brave browser"
-LABEL org.opencontainers.image.documentation="https://github.com/tibynx/brave-kasmvnc/blob/main/README.md"
+LABEL org.opencontainers.image.documentation="https://github.com/tibynx/docker-brave-kasmvnc/blob/main/README.md"
 LABEL org.opencontainers.image.licenses="GPL-3.0-only"
-LABEL org.opencontainers.image.source="https://github.com/tibynx/brave-kasmvnc"
+LABEL org.opencontainers.image.source="https://github.com/tibynx/docker-brave-kasmvnc"
 LABEL org.opencontainers.image.title="Brave"
-LABEL org.opencontainers.image.url="https://github.com/tibynx/brave-kasmvnc/packages"
+LABEL org.opencontainers.image.url="https://github.com/tibynx/docker-brave-kasmvnc/packages"
 LABEL org.opencontainers.image.vendor="tibynx"
 LABEL org.opencontainers.image.base.name="ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm"
 LABEL org.opencontainers.image.base.documentation="https://github.com/linuxserver/docker-baseimage-kasmvnc/blob/master/README.md"
